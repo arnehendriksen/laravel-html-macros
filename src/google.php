@@ -15,11 +15,11 @@ EOT;
 });
 
 Html::macro('webFontLoader', function (array $families) {
-    $families = implode(',', $families);
+    $families = implode('\', \'', $families);
     return <<<EOT
 <script type="text/javascript">
     WebFontConfig = {
-        google: { families: [ {$families} ] }
+        google: { families: [ '{$families}' ] }
     };
     (function() {
         var wf = document.createElement('script');
