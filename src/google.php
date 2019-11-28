@@ -1,6 +1,6 @@
 <?php
 
-Html::macro('googleAnalytics', function ($trackingId) {
+Html::macro('googleAnalytics', function (string $trackingId) {
     return <<<EOT
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={$trackingId}"></script>
@@ -14,7 +14,8 @@ Html::macro('googleAnalytics', function ($trackingId) {
 EOT;
 });
 
-Html::macro('webFontLoader', function ($families) {
+Html::macro('webFontLoader', function (array $families) {
+    $families = implode(',', $families);
     return <<<EOT
 <script type="text/javascript">
     WebFontConfig = {
