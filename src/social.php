@@ -1,6 +1,6 @@
 <?php
 
-// Note: add  prefix="og: http://ogp.me/ns#" to your <html> tag!
+// Note: add prefix="og: http://ogp.me/ns#" to your <html> tag!
 Html::macro('openGraph', function (array $data) {
     $html = '';
     foreach ($data as $property => $content) {
