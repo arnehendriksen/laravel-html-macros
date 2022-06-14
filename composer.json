@@ -18,5 +18,6 @@
   },
   "minimum-stability": "stable",
   "extra": {
-  }
+  },
+  "abandoned": true
 }
